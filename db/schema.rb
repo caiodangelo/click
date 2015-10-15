@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150515131047) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "reports", force: :cascade do |t|
     t.string   "first_entry"
     t.string   "first_exit"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150515131047) do
     t.string   "third_exit"
   end
 
-  add_index "reports", ["user_id"], name: "index_reports_on_user_id"
+  add_index "reports", ["user_id"], name: "index_reports_on_user_id", using: :btree
 
   create_table "timetables", force: :cascade do |t|
     t.date     "closing_day"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20150515131047) do
     t.datetime "updated_at"
   end
 
-  add_index "timetables", ["user_id"], name: "index_timetables_on_user_id"
+  add_index "timetables", ["user_id"], name: "index_timetables_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",      null: false
@@ -62,8 +65,8 @@ ActiveRecord::Schema.define(version: 20150515131047) do
     t.string   "hours_per_day",          default: "08:00"
   end
 
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
