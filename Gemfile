@@ -28,7 +28,7 @@ gem 'prawn'
 gem 'prawn-table'
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
   gem 'unicorn'
 end
 
