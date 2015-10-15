@@ -10,7 +10,7 @@ Rails.env.on(:test) do
 end
 
 Rails.env.on(:production) do
-  config.action_mailer.default_url_options = { host: 'http://www.clickhoras.com/' }
+  config.action_mailer.default_url_options = { host: 'https://click-horas.herokuapp.com/' }
 
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
