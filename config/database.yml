@@ -23,11 +23,3 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-
-production:
-  <<: *default
-  adapter: postgresql
-  encoding: unicode
-  database: d7o75l14qncum5
-  username: qculpfhmecvloy
-  password: rQsFbiINnffjAlYyk6-kacfaSY
