@@ -1,4 +1,5 @@
 # Click [![Code Climate](https://codeclimate.com/github/brunozrk/click/badges/gpa.svg)](https://codeclimate.com/github/brunozrk/click) [![Build Status](https://travis-ci.org/brunozrk/click.svg?branch=master)](https://travis-ci.org/brunozrk/click) [![Test Coverage](https://codeclimate.com/github/brunozrk/click/badges/coverage.svg)](https://codeclimate.com/github/brunozrk/click)
+[ ![Codeship Status for caiodangelo/click](https://codeship.com/projects/02c64920-56ac-0133-8153-5ebc52a48109/status?branch=master)](https://codeship.com/projects/109414)
 
 
 *Click* tem como objetivo oferecer uma ferramenta web para controlar o saldo de horas de trabalho. Acesse em www.clickhoras.com
